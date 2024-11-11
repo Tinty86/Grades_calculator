@@ -2,7 +2,7 @@
 import os
 from os import mkdir 
 from art import tprint
-from needly_lists import return_list
+from tuples import return_list
 import texts
 
 LinkedList = texts.LinkedList

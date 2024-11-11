@@ -1,4 +1,4 @@
-class Lists:
+class Tuples:
     stop_words = ("stop","save","end", "enough", "s", "закончить","остановить","конец","стоп", "достаточно", "с", "n")
     agreement_words = ("ok","yes","yeah","yea","yeap","yep","sure", "of course","y", "lf", "да", "ага", "давай", "ок", "окей", "конечно")
     del_words = ("delete last", "delete the last one", "delete last one", "delete", "del", "d", "удалить", "удалить прошлое", "удалить предыдущее", "удал", "уд")
@@ -16,7 +16,7 @@ class Lists:
         return self.del_words
 
 def return_list(which_list: str) -> tuple:
-    lists = Lists()
+    lists = Tuples()
     if which_list == "all":
         return lists.all_lists()
     elif which_list == "stop_words":
