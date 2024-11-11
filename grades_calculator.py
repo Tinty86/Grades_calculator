@@ -1,3 +1,4 @@
+# Now on Git
 import os
 from os import mkdir 
 from art import tprint
@@ -48,7 +49,7 @@ def maybe_another_file_name(object_name:str, agreement_words:tuple):
     return ""
 
 # Получение данных из файла
-            
+
 def collecting_data(path:str):
     linked_list_with_all = LinkedList()
     with open(path) as input_file:
@@ -74,9 +75,8 @@ def view_in_future(numerator:float, denominator:float, unreal_grade:str):
 
     return hypothetical_res_grade
 
-
 # Подсчет по формуле
-            
+
 def calculating(head: texts.LinkedList):
     node = head
     weights_list = [] 
@@ -96,9 +96,9 @@ def calculating(head: texts.LinkedList):
     denominator = float(sum(weights_list))
 
     return numerator, denominator
-    
+
 # main
-                
+
 def main(stop_words: tuple, agreement_words: tuple, path:str, object_name: str, del_words: tuple):
 
     if input("Есть ли новые оценки? ->: ").lower() in agreement_words: 
@@ -125,7 +125,6 @@ def main(stop_words: tuple, agreement_words: tuple, path:str, object_name: str, 
         if unreal_grade in stop_words: exit()
         hypothetical_res_grade = view_in_future(numerator, denominator, unreal_grade)
         print(f"Гипотетическая итоговая оценка - {hypothetical_res_grade}")
-    
 
 if __name__ == "__main__":
     # art
