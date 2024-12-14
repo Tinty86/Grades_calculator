@@ -1,36 +1,18 @@
 
-class LinkedList:
-    head = None
-    class Node:
-        grade = None
-        weight = None
-        next_node = None
-        def __init__(self, grade:int, weight:float, next_node=None):
-            self.grade = grade
-            self.weight = weight
-            self.next_node = next_node 
-    def append(self, grade, weight):
-        if not self.head:
-            self.head = self.Node(grade, weight)
-            return
-        node = self.head
-        while node.next_node:
-            node = node.next_node
-        node.next_node = self.Node(grade, weight)
-    def delete(self):
-        if not self.head:
-            print("Нет данных для удаления")
-            return
-        node = self.head
-        while node.next_node:
-            prev_node = node
-            node = node.next_node
-        prev_node.next_node = None 
-    def return_head(self):
-        return self.head
+start_message = """
+__        __       _                                 _                                    _                           _               _         _                 _ 
+\ \      / /  ___ | |  ___   ___   _ __ ___    ___  | |_   ___     __ _  _ __   __ _   __| |  ___  ___    ___   __ _ | |  ___  _   _ | |  __ _ | |_   ___   _ __ | |
+ \ \ /\ / /  / _ \| | / __| / _ \ | '_ ` _ \  / _ \ | __| / _ \   / _` || '__| / _` | / _` | / _ \/ __|  / __| / _` || | / __|| | | || | / _` || __| / _ \ | '__|| |
+  \ V  V /  |  __/| || (__ | (_) || | | | | ||  __/ | |_ | (_) | | (_| || |   | (_| || (_| ||  __/\__ \ | (__ | (_| || || (__ | |_| || || (_| || |_ | (_) || |   |_|
+   \_/\_/    \___||_| \___| \___/ |_| |_| |_| \___|  \__| \___/   \__, ||_|    \__,_| \__,_| \___||___/  \___| \__,_||_| \___| \__,_||_| \__,_| \__| \___/ |_|   (_)
+                                                                  |___/
+"""
 
 grades_path = "C:\\Users\\User\\.grades"
-start_message = "Напишите оценку и вес через точку с запятой (чтобы закончить напиши стоп) ->: "
+grade_message = "Напишите оценку и вес через точку с запятой (чтобы закончить напиши стоп) ->: "
 final_grade = "Напишите оценку, с помощью которой вы хотите узнать итоговую оценку, и её вес через точку с запятой (если вы хотите остановить ввод напишите \"стоп\") ->: "
-not_found_file = "Файл не найден, проверьте название файла, либо правильность написания предмета -"
+file_not_found= "Файл не найден, проверьте название файла, либо правильность написания предмета -"
 wish_of_saving = "Хотите ли вы сохранить оценки в файле? ->: "
+must_init = "Вы должны сначала записать оценки, перед тем как работать с ними!"
+check_choice = "Вы хотите проверять оценки по одному (1) или в зависимости друг от друга (2) (Напишите номер варианта)? ->: "
+hypothetical_grade = "Гипотетическая итоговая оценка -"
